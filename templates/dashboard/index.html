@@ -1,0 +1,26 @@
+{% extends "partials/base.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Country Name</th>
+        <th scope="col">Flag</th>
+        <th scope="col">Population</th>
+        <th scope="col">Size (km)</th>
+        <th scope="col">Capital City</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in data %}
+      <tr>
+        <td>{{ data.country_name }}</td>
+        <td>{{ data.flag }}</td>
+        <td>{{ data.population }}</td>
+        <td>{{ data.size }}</td>
+        <td>{{ data.capital_city }}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+{% endblock  %}
